@@ -21,6 +21,7 @@ export class HiringEditDialogComponent implements OnInit {
   id: number;
   hiring: Hiring;
   developers: Developer[];
+  developerId : Number[];
  
 
   formGroup: FormGroup;
@@ -87,8 +88,8 @@ delete body.developersId;
       hiring = new Hiring();
     }
 
-    let endDate;
-   /* if (hiring.endDate) {
+  /*  let endDate;
+    if (hiring.endDate) {
       endDate = new Date(hiring.endDate);
     } else {
       endDate = new Date();

@@ -28,6 +28,7 @@
       <label for="developers">developers <span class="text-danger">*</span></label>
       <select formControlName="developersId" class="form-control" id="developersId">
         <option *ngFor="let developer of developers" [value]="developer.id">{{developer.id}}</option>
+        
       <lq-error-label [control]="formGroup.get('developersId')"></lq-error-label>
       </select>
     </div>

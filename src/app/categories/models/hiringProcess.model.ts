@@ -5,14 +5,14 @@ export class Hiring {
   startDate: Date;
   endDate: Date;
   developers: Developer[];
-  developersId : number;
+  developersId : number[];
 
 constructor (){
 
 this.id = 0;
 //this.startDate= new Date();
 //this.endDate = new Date();
-this.developersId = 0;
+this.developersId = [0];
 
 }
 }
