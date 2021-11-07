@@ -1,0 +1,72 @@
+
+
+<div class="d-flex justify-content-between mt-2" style="margin-left: 100px;">
+
+  <form *ngIf="formGroup"
+        [formGroup]="formGroup"
+        (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input formControlName="name" type="text" class="form-control" id="name" placeholder="Enter name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Image</label>
+      <input formControlName="posterImgUrl" type="text" class="form-control" id="posterImgUrl" placeholder="Enter url">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input formControlName="price" type="text" class="form-control" id="email" placeholder="Enter email">
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input formControlName="phoneNumber" type="number" class="form-control" id="phoneNumber" placeholder="Enter Phone Number">
+    </div>
+
+    <div class="form-group">
+      <label for="technology">Select Technlogy</label>
+      <select formControlName="technology" class="form-control" id="technology">
+        <option>.NET</option>
+        <option>Java</option>
+        <option>Python</option>
+        <option>Javascript</option>
+        <option>Flutter</option>
+        <option>PHP</option>
+      </select>
+    </div>
+  
+    <div class="form-group">
+      <label for="yearsOfExperience">Years of Experience</label>
+      <input formControlName="yearsOfExperience" type="number" class="form-control" id="yearsOfExperience" placeholder="Enter years of experience">
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Price Per Hour</label>
+      <input formControlName="phoneNumber" type="number" class="form-control" id="phoneNumber" placeholder="Enter price per hour">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input formControlName="description" type="text" class="form-control" id="description" placeholder="Write description">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Location</label>
+      <input formControlName="location" type="text" class="form-control" id="location" placeholder="Write location">
+    </div>
+    <div class="form-group">
+      <label for="nativeLanguage">Native Language</label>
+      <input type="text" formControlName="nativeLanguage" class="form-control" id="nativeLanguage" placeholder="Enter Native Language">
+    </div>
+    <div class="form-group">
+      <label for="description">Link to LinkedIn </label>
+      <input formControlName="description" type="text" class="form-control" id="linkedInProfileLink" placeholder="Write link">
+    </div>
+   
+    <button type="submit" class="btn btn-primary" [disabled]="formGroup.invalid">Submit</button>
+
+  </form>
+</div>
+
+

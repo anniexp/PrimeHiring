@@ -1,0 +1,39 @@
+<form *ngIf="formGroup"
+      [formGroup]="formGroup"
+      (ngSubmit)="onSubmit()">
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{id ? 'Edit Hiring' : 'Create Hiring'}}</h4>
+    <button type="button" class="close pull-right" (click)="hideDialog()" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label for="startDate">start date <span class="text-danger">*</span></label>
+      <input formControlName="startDate"
+             type="date"
+             class="form-control"
+             id="startDate"
+             placeholder="Enter start Date">
+      <lq-error-label [control]="formGroup.get('startDate')"></lq-error-label>
+
+      <label for="endDate">end date <span class="text-danger">*</span></label>
+      <input formControlName="endDate"
+             type="date"
+             class="form-control"
+             id="endDate"
+             placeholder="Enter endDate">
+      <lq-error-label [control]="formGroup.get('endDate')"></lq-error-label>
+
+      <label for="developers">developers <span class="text-danger">*</span></label>
+      <select formControlName="developersId" class="form-control" id="developersId">
+        <option *ngFor="let developer of developers" [value]="developer.id">{{developer.id}}</option>
+      <lq-error-label [control]="formGroup.get('developersId')"></lq-error-label>
+      </select>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" (click)="hideDialog()" class="btn btn-default">Cancel</button>
+    <button type="submit" class="btn btn-primary"  [disabled]="formGroup.invalid" > Save</button>
+  </div>
+</form>

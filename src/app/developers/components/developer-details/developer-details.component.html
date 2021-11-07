@@ -1,0 +1,41 @@
+<p>developer-details works!</p>
+<div *ngIf="developer">
+  <div class="course-title">
+    <h1>{{developer.name}}</h1>
+
+  </div>
+
+  <div class="course-details">
+    <ul>
+      <li><span class="font-weight-bold">Email : </span> {{developer.email}}</li>
+      
+      <li><span class="font-weight-bold">Phone number: </span> {{developer.phone}}</li>
+      <li><span class="font-weight-bold">Location: </span> {{developer.location}}</li>
+      <li><span class="font-weight-bold">Profile picture: </span> {{developer.posterImgUrl}}</li>
+
+      <li><span class="font-weight-bold">Price Per Hour: </span> {{developer.pricePerHour}}</li>
+
+      <li><span class="font-weight-bold">Technology : </span> {{developer.technology}}</li>
+
+      <li><span class="font-weight-bold">Description: </span> {{developer.description}}</li>
+
+      <li>
+        <span class="font-weight-bold">years Of Experience : </span> {{developer.yearsOfExperience }} </li>
+      <li><span class = "font-weight-bold"> Native Language: </span> {{developer.nativeLanguage}}</li>
+      <li><span class="font-weight-bold">Link to LinkedIn: </span>  {{developer.linkedInProfileLink}}</li>
+
+    </ul>
+  </div>
+
+  <div class="game-image">
+    <img [src]="developer.posterImgUrl" [alt]="developer.title">
+  </div>
+
+  <div class="game-information">
+    <ul>
+      <li><span class="font-weight-bold">Created: </span>{{developer.created | date}}</li>
+      <li><span class="font-weight-bold">Last updated: </span>{{developer.lastUpdated | date}}</li>
+    </ul>
+  </div>
+</div>
+

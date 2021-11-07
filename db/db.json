@@ -1,0 +1,87 @@
+{
+  "developers": [
+    {
+      "id": 1,
+      "name": "Dorime",
+      "email": "dorime@gamil.com",
+      "phone": "0899999999",
+      "location": "Indonesia",
+      "posterImgUrl": "@@",
+      "pricePerHour": 10,
+      "technology": "Javascript",
+      "description": "Naah",
+      "yearsOfExperience": 2,
+      "nativeLanguage": "Indonesian",
+      " linkedInProfileLink": "@@"
+    },
+    {
+      "id": 2,
+      "name": "Alexander Mandarin",
+      "email": "alekm@gamil.com",
+      "phone": "0899999999",
+      "location": "England",
+      "posterImgUrl": "@@",
+      "pricePerHour": 8,
+      "technology": "Java",
+      "description": "Reeeeeeeeeee",
+      "yearsOfExperience": 5,
+      "nativeLanguage": "English ",
+      " linkedInProfileLink": "  "
+    },
+    {
+      "name": "hhrh",
+      "email": "",
+      "phoneNumber": 444,
+      "location": "kkhh",
+      "posterImgUrl": "drhrhrh",
+      "pricePerHour": 0,
+      "technology": "Java",
+      "description": "kkkk",
+      "yearsOfExperience": 3,
+      "nativeLanguage": "kkkk",
+      "linkedInProfileLink": "",
+      "id": 3
+    }
+  ],
+  "hirings": [
+    {
+      "id": 1,
+      "name": "FarmSystem",
+      "startDate": "2021-10-05T10:54:33.176Z",
+      "endDate": "2022-01-06T16:38:07.744Z",
+      "developers": [
+        {
+          "developersId": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "JavaInternship",
+      "startDate": "2021-11-07T10:53:05.706Z",
+      "endDate": "2021-11-07T10:53:05.706Z",
+      "developers": [
+        {
+          "developersId": 2
+        }
+      ],
+      "developersId": "2"
+    },
+    {
+      "id": 3,
+      "startDate": "2021-11-07T09:59:34.011Z",
+      "endDate": "2021-11-07T09:59:34.011Z",
+      "developersId": "2"
+    },
+    {
+      "id": 4,
+      "startDate": "2021-11-02",
+      "endDate": "2021-11-11"
+    },
+    {
+      "id": 5,
+      "startDate": "2021-11-22",
+      "endDate": "2021-11-26"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+<div class="d-flex justify-content-between mt-2">
+  <h3>Categories</h3>
+  <div>
+    <button (click)="onCreateClick()" class="btn btn-primary">Create</button>
+  </div>
+</div>
+<div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>start date</th>
+      <th>end date</th>
+      <th>Selected Developers</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let hiring of hirings">
+      <td>{{hiring.id}}</td>
+      <td>{{hiring.startDate | date}}</td>
+      <td>{{hiring.endDate | date}}</td>
+      <td> <ul>
+        <li *ngFor="let developerId of developers"> (1)
+          {{ developerId.developersId }}
+        </li>
+       </ul></td>
+      <td>
+        <button class="btn btn-sm btn-outline-primary"
+                (click)="onEditClick(hiring.id)">Edit
+        </button>
+        <button class="btn btn-sm btn-outline-danger ml-2"
+                (click)="onDeleteClick(hiring)">Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

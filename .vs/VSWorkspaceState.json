@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\categories",
+    "\\src\\app\\categories\\models",
+    "\\src\\app\\games",
+    "\\src\\app\\games\\components",
+    "\\src\\app\\games\\components\\game-details",
+    "\\src\\app\\games\\components\\game-edit",
+    "\\src\\app\\games\\models"
+  ],
+  "SelectedNode": "\\src\\app\\games\\components\\game-edit\\game-edit.component.html",
+  "PreviewInSolutionExplorer": false
+}

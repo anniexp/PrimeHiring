@@ -1,0 +1,97 @@
+<div class="d-flex justify-content-between mt-2">
+  <h3>developers</h3>
+  <div>
+    <a routerLink="../create" class="btn btn-primary">Create</a>
+  </div>
+</div>
+
+
+
+
+<div class="mainContent">
+  <table class="table">
+    <thead>
+      <tr class="warning">
+        <th>ID</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Location</th>
+        <th>pricePerHour</th>
+        <th>Technology</th>
+        <th>Description</th>
+        <th>linkedInProfileLink</th> 
+        <th>Actions</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="warning" *ngFor="let developer of developers">
+        <td>{{developer.id}}</td>
+        <td>
+          <div class="game-summary">
+
+            <div class="game-image-container">
+              <img width="200px" height="auto" [src]="developer.posterImgUrl" [alt]="developer.name">
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="game-titles-container">
+            <a class="game-title" [routerLink]="['/', 'developers', 'details', developer.id]">{{developer.name}}</a>
+
+
+          </div>
+        </td>
+
+
+
+        <td>{{developer.email}}</td>
+        <td>{{developer.phone}}</td>
+        <td>{{developer.location}}</td>
+        <td>{{developer.pricePerHour}}</td>
+        <td>{{developer.technology}}</td>
+        <td>{{developer.description}}</td>
+        <td>{{developer.yearsOfExperience}}</td>
+        <td>{{developer.nativeLanguage}}</td>
+        <td>{{developer.linkedInProfileLink}}</td>
+
+        <td>
+         
+        </td>
+        <td>
+          <a class="btn btn-sm btn-outline-primary"
+             [routerLink]="['/', 'developers', 'edit', developer.id]">Edit</a>
+          <button (click)="openDeleteDialog(deleteDialogTemplate, developer)"
+                  class="btn btn-sm btn-outline-danger ml-2">
+            Delete
+          </button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
+<div *ngIf="listType === 'json'">
+  <pre>{{developers | json}}</pre>
+</div>
+
+<ng-template #deleteDialogTemplate>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Delete Developer?</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Are you sure you want to delete developer "{{selectedDeveloper.name}}"?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" (click)="modalRef.hide()">Cancel</button>
+    <button type="button" class="btn btn-danger" (click)="deleteDeveloper()">Delete</button>
+  </div>
+</ng-template>
