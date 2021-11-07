@@ -84,7 +84,7 @@ export class DeveloperEditComponent implements OnInit {
     this.formGroup = this.fb.group({
       name:[ developer.name, Validators.required ] ,   
       email:[developer.email , Validators.required, Validators.email],
-      phoneNumber: [ developer.phoneNumber, Validators.required,  Validators.minLength(6), Validators.maxLength(10)],
+      phoneNumber: [ developer.phoneNumber, Validators.required,  Validators.minLength(6), Validators.maxLength(10), Validators.pattern('^[0-9]{10}$')],
       location : developer.location,
         posterImgUrl:developer.posterImgUrl, 
         pricePerHour :[ developer.pricePerHour, Validators.min(0) ],
