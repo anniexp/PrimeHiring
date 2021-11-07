@@ -27,7 +27,7 @@ export class DeveloperEditComponent implements OnInit {
               private fb: FormBuilder) {
     this.id = +this.route.snapshot.paramMap.get('id');
   }
-
+/*
   ngOnInit(): void {
     if (this.id) {
       this.developersService.getById$(this.id).subscribe((response) => {
@@ -36,8 +36,8 @@ export class DeveloperEditComponent implements OnInit {
       });
     } else {
       this.buildForm();
-    }
-/*
+    }*/
+
     ngOnInit(): void {
       this.developersService.getById$(this.id).pipe(
         take(1)
@@ -46,7 +46,7 @@ export class DeveloperEditComponent implements OnInit {
       }, (response: HttpErrorResponse) => {
         this.toastrService.error(response.message, 'Error');
         this.router.navigate(['developers']);
-      });*/
+      });
  
   }
 
@@ -84,7 +84,7 @@ export class DeveloperEditComponent implements OnInit {
     this.formGroup = this.fb.group({
       name:[ developer.name, Validators.required ] ,   
       email:[developer.email , Validators.required, Validators.email],
-      phoneNumber: [ developer.phoneNumber, Validators.required,  Validators.minLength(6), Validators.maxLength(10), Validators.pattern('^[0-9]{10}$')],
+      phoneNumber: [ developer.phoneNumber, Validators.required,  Validators.minLength(6), Validators.maxLength(10), Validators.pattern('^[0-9]$')],
       location : developer.location,
         posterImgUrl:developer.posterImgUrl, 
         pricePerHour :[ developer.pricePerHour, Validators.min(0) ],
