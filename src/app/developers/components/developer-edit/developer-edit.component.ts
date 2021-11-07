@@ -27,7 +27,7 @@ export class DeveloperEditComponent implements OnInit {
               private fb: FormBuilder) {
     this.id = +this.route.snapshot.paramMap.get('id');
   }
-/*
+
   ngOnInit(): void {
     if (this.id) {
       this.developersService.getById$(this.id).subscribe((response) => {
@@ -36,19 +36,23 @@ export class DeveloperEditComponent implements OnInit {
       });
     } else {
       this.buildForm();
-    }*/
+    }
 
-    ngOnInit(): void {
+  /*  ngOnInit(): void {
+      if (this.id) {
       this.developersService.getById$(this.id).pipe(
         take(1)
-      ).subscribe((developer ) => {
-        this.developer = developer;
-      }, (response: HttpErrorResponse) => {
-        this.toastrService.error(response.message, 'Error');
-        this.router.navigate(['developers']);
-      });
- 
-  }
+      ).subscribe((response ) => {
+        this.developer = response;
+        this.buildForm(response);
+
+      }); }
+      else {
+        this.buildForm();
+      }
+ */
+  
+}
 
   onSubmit(): void {
     if (this.formGroup.invalid) {
