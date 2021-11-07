@@ -21,8 +21,8 @@
       <td>{{hiring.startDate | date}}</td>
       <td>{{hiring.endDate | date}}</td>
       <td> <ul>
-        <li *ngFor="let developerId of developers"> (1)
-          {{ developerId.developersId }}
+        <li *ngFor="let developerId of hiring.developers">
+          {{ developerId.developersId |  number }}
         </li>
        </ul></td>
       <td>

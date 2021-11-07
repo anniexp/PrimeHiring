@@ -4,7 +4,7 @@ export class Hiring {
   id: number;
   startDate: Date;
   endDate: Date;
-  developers?: Developer[];
+  developers: Developer[];
   developersId : number;
 
 constructor (){
